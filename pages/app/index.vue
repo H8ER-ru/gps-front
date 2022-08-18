@@ -8,10 +8,8 @@
 
 <script>
 export default {
-  name: "appStart",
-}
+  name: "AppStart",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

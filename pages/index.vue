@@ -1,32 +1,28 @@
 <template>
   <NuxtLayout name="start">
     <div class="base">
-      <h1>
-        Начальная страница
-      </h1>
-      <nuxt-link to="app/auth">
-        К приложению
-      </nuxt-link>
+      <h1>Начальная страница</h1>
+      <nuxt-link to="app/auth"> К приложению </nuxt-link>
     </div>
   </NuxtLayout>
 </template>
 
-<script>
-import {useCounterStore} from "../store";
-import {storeToRefs} from "pinia";
+<script lang="ts">
+import { useCounterStore } from "~/store";
+import { storeToRefs } from "pinia";
 
 export default {
   setup() {
-    const store = useCounterStore()
+    const store = useCounterStore();
 
-    const { getCount } = storeToRefs(store)
+    const { getCount } = storeToRefs(store);
 
     return {
       counter: getCount,
-      addCount: store.addCounter
-    }
+      addCount: store.addCounter,
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="sass">

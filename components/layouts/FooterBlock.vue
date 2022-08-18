@@ -1,12 +1,11 @@
 <template>
-  <div class="start">
-    <slot />
-  </div>
+  <footer>футер</footer>
 </template>
 
 <script>
 export default {
-  name: "Start",
+  name: "FooterBlock",
+  methods: {},
 };
 </script>
 

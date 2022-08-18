@@ -1,21 +1,21 @@
 <template>
   <div>
-    <Header/>
+    <HeaderBlock />
     <div class="app-wrapper">
       <slot />
     </div>
-    <Footer/>
+    <FooterBlock />
   </div>
 </template>
 
 <script>
-import Footer from "../components/layouts/Footer";
-import Header from "../components/layouts/Header";
+import HeaderBlock from "../components/layouts/HeaderBlock.vue";
+import FooterBlock from "../components/layouts/FooterBlock.vue";
 
 export default {
-  name: "app",
-  components: {Footer, Header}
-}
+  name: "App",
+  components: { FooterBlock, HeaderBlock },
+};
 </script>
 
 <style scoped lang="sass">

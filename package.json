@@ -4,11 +4,35 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue,html,css}": [
+      "npm run lintfix"
+    ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^3.2.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "nuxt": "3.0.0-rc.8",
-    "sass": "^1.54.4"
+    "prettier": "^2.7.1",
+    "sass": "^1.54.4",
+    "typescript": "^4.7.4"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.0",
