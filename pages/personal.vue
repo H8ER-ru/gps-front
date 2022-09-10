@@ -1,11 +1,10 @@
 <template>
-  <footer>футер</footer>
+  <main>personal</main>
 </template>
 
 <script>
 export default {
-  name: "FooterBlock",
-  methods: {},
+  name: "Profile",
 };
 </script>
 

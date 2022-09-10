@@ -1,5 +1,82 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+
 *, *:before, *:after{
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--textMain);
+}
+
+button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --textMain: #282828;
+    --functionMain: #5514BF;
+    --functionMainLight: #B293F1;
+    --inputBackground: #F4F4F8;
+    --mainBackground: #ffffff;
+    --searchColor: #6C7684;
+}
+
+input {
+    background: transparent;
+    border: 0;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+    opacity: 0;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }

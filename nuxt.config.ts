@@ -25,13 +25,4 @@ export default defineNuxtConfig({
   },
   modules: ["@pinia/nuxt"],
   css: ["@/assets/style/base.css"],
-  vite: {
-    css: {
-      preprocessorOptions: {
-        sass: {
-          additionalData: '@import "@/assets/style/variables.sass"',
-        },
-      },
-    },
-  },
 });
