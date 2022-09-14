@@ -151,6 +151,8 @@ export default {
 
 <style scoped lang="scss">
 .bottom-menu {
+  max-width: 900px;
+  margin: 0 auto;
   position: fixed;
   z-index: 5;
   left: 0;

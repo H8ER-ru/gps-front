@@ -22,6 +22,9 @@ export default {
 .app-wrapper
   padding-bottom: 60px
   padding-top: 80px
+  width: 100%
+  max-width: 900px
+  margin: 0 auto
 
 .page-wrapper
   min-height: 70vh

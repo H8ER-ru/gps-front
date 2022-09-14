@@ -1,4 +1,8 @@
-<template>auth</template>
+<template>
+  <div class="auth-wrapper">
+    <img src="" alt="">
+  </div>
+</template>
 
 <script>
 export default {
@@ -6,4 +10,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.auth-wrapper {
+
+}
+</style>
