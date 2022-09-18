@@ -19,9 +19,9 @@ export default {
 
 <style scoped lang="scss">
 .search-item {
-  color: #6c7684;
+  color: white;
   border-radius: 20px;
-  background: #eaddf7;
+  background: var(--functionMainLight);
   padding: 5px 7px;
   font-size: 12px;
   line-height: 140%;

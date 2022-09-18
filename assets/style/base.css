@@ -59,6 +59,8 @@ a {
     --inputBackground: #F4F4F8;
     --mainBackground: #ffffff;
     --searchColor: #6C7684;
+    --positive: #46CB25;
+    --negative: #E60F0F;
 }
 
 input {
@@ -79,4 +81,8 @@ input {
 
 .mb-10 {
     margin-bottom: 10px;
+}
+
+.mb-36 {
+    margin-bottom: 36px;
 }

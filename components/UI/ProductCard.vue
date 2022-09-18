@@ -1,15 +1,28 @@
 <template>
   <div class="product-card">
     <div class="product-card__picture">pic</div>
-    <p class="product-card__name">
-      Пирожные <br />
-      Профитроли от компании бест
-    </p>
-    <div class="product-card__price">
-      <span class="product-card__price-new">485,00₽ </span>
-      <span class="product-card__price-old">605,00₽</span>
+    <div class="product-card__text">
+      <p class="product-card__name">Вишня красная королевская</p>
+      <p class="product-card__description">1шт (80г)</p>
     </div>
-    <Checkbox :checked="true" />
+    <div class="product-card__price">
+      <span class="product-card__price">485,00₽ </span>
+      <span class="product-card__diff product-card__diff--positive">
+        <svg
+          width="4"
+          height="9"
+          viewBox="0 0 4 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.16963 7.91879L3.73333 6.62591L4 6.84639L2 8.5L0 6.84639L0.266667 6.62591L1.7925 7.88748L1.7925 0.5L2.16962 0.5L2.16963 7.91879Z"
+            fill="#46CB25"
+          />
+        </svg>
+        312,00₽ (54%)
+      </span>
+    </div>
   </div>
 </template>
 
@@ -43,23 +56,33 @@ export default {
     flex-direction: column;
     margin-left: auto;
     margin-right: 5px;
-    &-new {
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 140%;
-    }
-    &-old {
-      font-weight: 300;
-      font-size: 10px;
-      line-height: 140%;
-      text-decoration-line: line-through;
-    }
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
   }
-  &__name {
-    max-width: 50%;
+  &__diff {
     font-weight: 400;
     font-size: 10px;
     line-height: 140%;
+    &--positive {
+      color: var(--positive);
+    }
+    &--negative {
+      color: var(--negative);
+    }
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+  }
+  &__text {
+    max-width: 50%;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--searchColor);
   }
 }
 </style>

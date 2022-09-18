@@ -2,7 +2,10 @@
   <main class="main-page">
     <BaseTitle text="Сэкономлено средств" />
     <p class="main-page__money">5 771,11₽</p>
-
+    <p class="main-page__period">
+      <span class="main-page__period-number">+905,6₽ 15% </span>
+      <span class="main-page__period-toggle">(за весь период)</span>
+    </p>
     <div
       style="
         background: rgba(85, 20, 191, 0.06);
@@ -32,7 +35,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .main-page {
   &__money {
     margin-top: 5px;
@@ -40,6 +43,16 @@ export default {
     font-size: 36px;
     line-height: 110%;
     color: var(--functionMain);
+  }
+  &__period {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  &__period-number {
+    color: var(--positive);
+  }
+  &__period-toggle {
+    color: var(--functionMainLight);
   }
 }
 </style>
