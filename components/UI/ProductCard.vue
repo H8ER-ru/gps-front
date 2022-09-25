@@ -1,11 +1,12 @@
 <template>
-  <div class="product-card">
-    <div class="product-card__picture">pic</div>
+  <div ref="card" class="product-card">
+    <img class="product-card__picture" :src="image" />
     <div class="product-card__text">
       <p class="product-card__name">Вишня красная королевская</p>
       <p class="product-card__description">1шт (80г)</p>
     </div>
     <div class="product-card__price">
+      <img :src="shopImg" width="16" height="16" />
       <span class="product-card__price">485,00₽ </span>
       <span class="product-card__diff product-card__diff--positive">
         <svg
@@ -31,6 +32,20 @@ import Checkbox from "./Checkbox";
 export default {
   name: "ProductCard",
   components: { Checkbox },
+  props: {
+    shopImg: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    image: {
+      type: String,
+      required: false,
+      default: "",
+    },
+  },
+  mounted() {},
+  methods: {},
 };
 </script>
 
@@ -40,13 +55,13 @@ export default {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 70px;
   border-bottom: 1px solid var(--functionMainLight);
   & > * {
     flex-shrink: 0;
     display: block;
   }
   &__picture {
-    background: rgba(104, 11, 197, 0.22);
     width: 45px;
     height: 45px;
     margin-right: 5px;
@@ -59,6 +74,11 @@ export default {
     font-weight: 500;
     font-size: 13px;
     line-height: 140%;
+    img {
+      border-radius: 50%;
+      margin-left: auto;
+      margin-bottom: 3px;
+    }
   }
   &__diff {
     font-weight: 400;

@@ -1,16 +1,23 @@
 <template>
-  <StartStep v-if="currentStep === 'start'" @next="currentStep = 'emailStep'" />
-  <EmailAuth v-if="currentStep === 'emailStep'" />
+  <StartStep
+    v-if="currentStep === 'start'"
+    @next="currentStep = 'emailLogin'"
+  />
+  <EmailAuth v-if="currentStep === 'emailLogin'" />
+  <EmailRegister v-if="currentStep === 'emailRegister'" />
 </template>
 
-<script>
-import StartStep from "../components/features/AuthSteps/StartStep";
-import EmailAuth from "../components/features/AuthSteps/EmailAuth";
+<script lang="ts">
+import StartStep from "../components/features/AuthSteps/StartStep.vue";
+import EmailAuth from "../components/features/AuthSteps/EmailAuth.vue";
+import EmailRegister from "../components/features/AuthSteps/EmailRegister.vue";
+import { definePageMeta } from "#imports";
+
 definePageMeta({
   layout: "auth",
 });
 export default {
-  components: { EmailAuth, StartStep },
+  components: { EmailRegister, EmailAuth, StartStep },
   data: () => ({
     currentStep: "start",
   }),

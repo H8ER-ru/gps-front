@@ -18,9 +18,15 @@
       реклама
     </div>
     <BaseTitle text="Купить сегодня" />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+    <ProductCard image="assets/images/eda/2.webp" />
+    <ProductCard
+      image="assets/images/eda/1.webp"
+      shop-img="assets/images/shops/5.webp"
+    />
+    <ProductCard
+      image="assets/images/eda/3.webp"
+      shop-img="assets/images/shops/ab.png"
+    />
   </main>
 </template>
 

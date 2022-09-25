@@ -8,6 +8,8 @@
       <SearchItem text="Хлеб и выпечка" />
       <SearchItem text="Подарки" />
     </div>
+
+    <BaseTitle text="Взлеты и падения дня" class="mt-30" />
   </main>
 </template>
 
