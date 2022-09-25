@@ -8,12 +8,12 @@
         margin-bottom: 30px;
       "
     ></div>
-    <ProfileButton text="Профиль" icon="assets/icons/user.svg" />
-    <ProfileButton text="Карты" icon="assets/icons/card.svg" />
-    <ProfileButton text="Мои покупки" icon="assets/icons/shop.svg" />
-    <ProfileButton text="Статистика" icon="assets/icons/stat.svg" />
-    <ProfileButton text="Избранное" icon="assets/icons/like.svg" />
-    <ProfileButton text="настройки" icon="assets/icons/setting.svg" />
+    <ProfileButton text="Профиль" icon="/icons/user.svg" />
+    <ProfileButton text="Карты" icon="/icons/card.svg" />
+    <ProfileButton text="Мои покупки" icon="/icons/shop.svg" />
+    <ProfileButton text="Статистика" icon="/icons/stat.svg" />
+    <ProfileButton text="Избранное" icon="/icons/like.svg" />
+    <ProfileButton text="настройки" icon="/icons/setting.svg" />
   </main>
 </template>
 
