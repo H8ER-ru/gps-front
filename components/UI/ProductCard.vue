@@ -1,5 +1,11 @@
 <template>
-  <div ref="card" class="product-card">
+  <div
+    ref="card"
+    class="product-card"
+    :class="{ 'product-card--right': swiperRight }"
+    @touchstart="touchStart"
+  >
+    <div class="product-card__buy">Куплено</div>
     <img class="product-card__picture" :src="image" />
     <div class="product-card__text">
       <p class="product-card__name">Вишня красная королевская</p>
@@ -44,22 +50,78 @@ export default {
       default: "",
     },
   },
+  data: () => ({
+    swiperRight: false,
+    swipeLeft: false,
+  }),
   mounted() {},
-  methods: {},
+  methods: {
+    touchStart(touchEvent) {
+      if (touchEvent.changedTouches.length !== 1) {
+        // We only care if one finger is used
+        return;
+      }
+      const posXStart = touchEvent.changedTouches[0].clientX;
+      addEventListener(
+        "touchend",
+        (touchEvent) => this.touchEnd(touchEvent, posXStart),
+        { once: true }
+      );
+    },
+    touchEnd(touchEvent, posXStart) {
+      if (touchEvent.changedTouches.length !== 1) {
+        // We only care if one finger is used
+        return;
+      }
+      const posXEnd = touchEvent.changedTouches[0].clientX;
+      if (posXStart < posXEnd) {
+        this.swiperRight = true;
+        setTimeout(() => {
+          this.swiperRight = false;
+        }, 2000);
+      } else if (posXStart > posXEnd) {
+        this.$refs.card.style.background = "blue";
+      }
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .product-card {
+  position: relative;
   padding: 8px 0;
   display: flex;
   align-items: center;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid var(--functionMainLight);
+  transition: right 0.5 ease-in;
   & > * {
     flex-shrink: 0;
     display: block;
+  }
+
+  &--right {
+    right: -100px;
+    .product-card__buy {
+      opacity: 1;
+    }
+  }
+
+  &__buy {
+    opacity: 0;
+    width: 100px;
+    height: 70px;
+    background: #b293f1;
+    position: absolute;
+    left: -100px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s linear;
   }
   &__picture {
     width: 45px;

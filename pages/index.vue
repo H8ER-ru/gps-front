@@ -37,9 +37,6 @@ import BaseTitle from "~/components/UI/BaseTitle.vue";
 import ProductCard from "~/components/UI/ProductCard.vue";
 export default {
   components: { ProductCard, BaseTitle },
-  setup() {
-    console.log("start");
-  },
 };
 </script>
 
